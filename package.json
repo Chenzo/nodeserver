@@ -1,0 +1,19 @@
+{
+  "name": "nodeserver",
+  "version": "1.0.0",
+  "description": "First attempt at making a node.js server with Express",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node.js",
+    "express.js",
+    "chenzo"
+  ],
+  "author": "Chenzo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
