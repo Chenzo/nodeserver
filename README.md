@@ -25,6 +25,6 @@ This sets it in a _screen session_. The terminal can be closed. To get back to t
 $ screen -r
 ```
 
-You'll be recoonected to the backgrounded sheel.
+You'll be recoonected to the backgrounded shell.
 
 
