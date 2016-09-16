@@ -11,7 +11,6 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 router.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/www/index.html'));
-
 });
 
 // define the second route
@@ -44,6 +43,17 @@ router.get('/fourth/:extra', function(req, res) {
   //res.send('third route...');
   res.send('fourth: ' + req.params.extra);
 });
+
+
+
+
+// define the third route w/o params
+router.get('/hbs', function(req, res) {
+  res.sendFile(path.join(__dirname + '/www/hbs_test.hbs'));
+});
+
+
+
 
 
 module.exports = router;

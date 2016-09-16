@@ -3,7 +3,11 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var thePort = 7080;
-var chenzrouter = require('./chenzrouter')
+var chenzrouter = require('./chenzrouter');
+var hbs = require('hbs');
+
+
+app.set('view engine', 'hbs');
 
 app.use('/', chenzrouter);
 app.use('/imgs', express.static(__dirname + '/www/imgs'));

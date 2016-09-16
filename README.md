@@ -28,3 +28,12 @@ $ screen -r
 You'll be recoonected to the backgrounded shell.
 
 
+
+
+* Trying out HandleBars (hbs) as a simple templating engine.
+
+```bash
+$ npm install hbs --save-dev
+```
+
+
