@@ -50,7 +50,11 @@ router.get('/fourth/:extra', function(req, res) {
 // define the third route w/o params
 router.get('/hbs', function(req, res) {
 								//Finds the HBS files and renders them. Insanity.
-  res.render(__dirname + '/www/hbs_test', { chenz_hbs: 'I am the variable', message: 'Hello there!'});
+  res.render(__dirname + '/www/hbs_test', { chenz_hbs: 'I am the variable', people: [
+    {firstName: "Yehuda", lastName: "Katz"},
+    {firstName: "Carl", lastName: "Lerche"},
+    {firstName: "Alan", lastName: "Johnson"}
+  ]});
 
 });
 

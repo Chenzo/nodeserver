@@ -19,6 +19,15 @@
         </div>
     </div>
 
+    <div class="container">
+        <ul class="list-group">
+            {{#each people}}
+            <li class="list-group-item">{{this.firstName}} <span class="label label-success">{{this.lastName}}</span></li>
+            {{/each}}
+        </ul>
+    </div>
+
+
 
 </body>
 </html>
