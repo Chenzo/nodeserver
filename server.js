@@ -1,17 +1,11 @@
-//$ node server.js
-
+//$ node server2.js
 var express = require('express');
 var app = express();
 var path = require('path');
 var thePort = 7080;
+var chenzrouter = require('./chenzrouter')
 
-
-
-// viewed at http://localhost:7080
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/www/index.html'));
-});
-
+app.use('/', chenzrouter);
 app.use('/imgs', express.static(__dirname + '/www/imgs'));
 app.use('/js', express.static(__dirname + '/www/css'));
 app.use('/css', express.static(__dirname + '/www/js'));
@@ -25,10 +19,12 @@ app.use(function(err, req, res, next) {
   res.status(500).send('Something broke!');
 });
 
-app.listen(thePort);
+
+app.listen(thePort, function() {
+	console.log("server running...");
+});
 
 
 
 
 
-console.log("server running...");
