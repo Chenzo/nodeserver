@@ -4,7 +4,8 @@ var path = require('path');
 
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
-  console.log('Time: ', Date.now());
+  //This runs every request?
+  //console.log('Time: ', Date.now());
   next();
 });
 
@@ -57,6 +58,17 @@ router.get('/hbs', function(req, res) {
   ]});
 
 });
+
+
+
+
+router.post('/quotes', (req, res) => {
+  console.log('Hellooooooooooooooooo!');
+  //req.body.variable_name
+  console.log("this? " + req.body.name);
+})
+
+
 
 
 

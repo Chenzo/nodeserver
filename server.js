@@ -2,11 +2,12 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var bodyParser = require('body-parser');
 var thePort = 7080;
 var chenzrouter = require('./chenzrouter');
 var hbs = require('hbs');
 
-
+app.use(bodyParser.urlencoded({extended: true}))
 app.set('view engine', 'hbs');
 
 app.use('/', chenzrouter);
